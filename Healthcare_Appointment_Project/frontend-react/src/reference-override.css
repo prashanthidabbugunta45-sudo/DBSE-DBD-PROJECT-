@@ -1,0 +1,94 @@
+:root {
+  --careplus-blue: #0f85d9;
+  --careplus-blue-dark: #0b5ea9;
+  --careplus-sky: #ebf7ff;
+  --careplus-card: #ffffff;
+  --careplus-soft: #f5fbff;
+  --careplus-line: #dfeff6;
+  --careplus-text: #163d5d;
+  --careplus-muted: #6c8292;
+  --success: #1d9b63;
+  --warning: #d89c1d;
+  --danger: #d95858;
+}
+
+body {
+  background: #f3faff;
+}
+
+.nav {
+  box-shadow: 0 1px 0 rgba(31, 91, 141, 0.08);
+}
+
+.brand-mark {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: inline-grid;
+  place-items: center;
+  background: linear-gradient(135deg, #1ca5ff, #0d6ec1);
+  color: #fff;
+  font-size: 12px;
+}
+
+.button {
+  border-radius: 10px;
+  transition: all 0.2s ease;
+}
+
+.button.primary {
+  background: linear-gradient(135deg, #1b9af1, #0d7dcc);
+  border: none;
+  box-shadow: 0 12px 20px rgba(13, 125, 204, 0.18);
+}
+
+.hero {
+  padding-top: 52px;
+}
+
+.hero h1 {
+  font-size: clamp(42px, 5vw, 72px);
+  letter-spacing: -0.04em;
+}
+
+.panel,
+.card,
+.category-card,
+.doctor-card-react,
+.filter-panel,
+.dashboard-panel,
+.quick-link,
+.login-panel {
+  border: 1px solid var(--careplus-line);
+  box-shadow: 0 14px 28px rgba(26, 88, 126, 0.06);
+}
+
+.category-grid,
+.doctor-grid,
+.quick-actions,
+.stat-grid {
+  gap: 16px;
+}
+
+.patient-sidebar {
+  box-shadow: inset -1px 0 0 rgba(31, 91, 141, 0.08);
+}
+
+.sidebar-nav a.active,
+.sidebar-nav a:hover {
+  background: #eaf7ff;
+}
+
+.table th {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.message.error {
+  background: #fff3f3;
+}
+
+.message.success {
+  background: #ecfff4;
+}

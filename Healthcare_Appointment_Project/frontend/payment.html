@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - CarePlus</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="payment-page">
+
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-heart-pulse"></i>
+                <div class="logo-text">
+                    <h1>CarePlus</h1>
+                    <p>Your Health. Our Priority</p>
+                </div>
+            </a>
+            <div class="nav-buttons">
+                <a href="dashboard.html" class="btn btn-outline">Dashboard</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="payment-main">
+        <div class="container">
+            <div class="payment-box">
+                <div class="payment-icon"><i class="fa-solid fa-credit-card"></i></div>
+                <h1>Complete Your Payment</h1>
+                <p>Appointment ID: <strong id="payApptId"></strong></p>
+
+                <div class="payment-amount">
+                    <span>Total Amount</span>
+                    <strong>₹500.00</strong>
+                </div>
+
+                <div class="form-group">
+                    <label>Payment Method</label>
+                    <select id="paymentMethod">
+                        <option value="Demo UPI">Demo UPI</option>
+                        <option value="Demo Card">Demo Card</option>
+                        <option value="Demo Net Banking">Demo Net Banking</option>
+                    </select>
+                </div>
+
+                <button id="payNowBtn" class="btn btn-solid full-width-btn">Pay Now</button>
+
+                <div id="receiptSection" class="receipt-section hidden">
+                    <div class="receipt-success-icon"><i class="fa-solid fa-circle-check"></i></div>
+                    <h2>Payment Successful!</h2>
+                    <div class="receipt-details">
+                        <p><strong>Receipt Number:</strong> <span id="receiptNum"></span></p>
+                        <p><strong>Amount Paid:</strong> ₹<span id="receiptAmount"></span></p>
+                        <p><strong>Status:</strong> <span style="color:green;">Success</span></p>
+                    </div>
+                    <a href="dashboard.html" class="btn btn-solid full-width-btn" style="margin-top:15px;">Back to
+                        Dashboard</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

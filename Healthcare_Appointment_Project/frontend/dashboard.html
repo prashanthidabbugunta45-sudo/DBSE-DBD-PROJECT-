@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Dashboard - CarePlus</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="dashboard-page">
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-heart-pulse"></i>
+                <div class="logo-text">
+                    <h1>CarePlus</h1>
+                    <p>Your Health. Our Priority</p>
+                </div>
+            </a>
+            <div class="nav-buttons">
+                <span class="patient-identity">
+                    <strong id="patientName">Patient</strong>
+                    <small id="patientIdDisplay"></small>
+                </span>
+                <button type="button" onclick="logout()" class="btn btn-outline">
+                    <i class="fa-solid fa-right-from-bracket"></i> Logout
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="dashboard-main">
+        <div class="container">
+            <section class="dashboard-welcome">
+                <div>
+                    <p class="hero-subtitle">PATIENT PORTAL</p>
+                    <h1>Welcome, <span id="patientNameHeading">patient</span></h1>
+                    <p>Manage your appointments and stay connected with your care team.</p>
+                </div>
+                <a href="booking.html" class="btn btn-solid">
+                    <i class="fa-regular fa-calendar-plus"></i> Book Appointment
+                </a>
+            </section>
+
+            <div class="dashboard-grid">
+                <section class="dashboard-section dashboard-appointments">
+                    <div class="section-heading-row">
+                        <h2><i class="fa-regular fa-calendar-check"></i> My Appointments</h2>
+                        <a href="booking.html" class="text-link">Book another</a>
+                    </div>
+                    <div id="appointmentList">
+                        <p class="loading-text">Loading...</p>
+                    </div>
+                </section>
+
+                <section class="dashboard-section dashboard-notifications">
+                    <div class="section-heading-row">
+                        <h2><i class="fa-regular fa-bell"></i> Notifications</h2>
+                    </div>
+                    <div id="notificationList">
+                        <p class="loading-text">Loading...</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const name = localStorage.getItem("full_name") || "Patient";
+            const heading = document.getElementById("patientNameHeading");
+            if (heading) heading.textContent = name;
+        });
+    </script>
+    <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Registration - CarePlus</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="register-page">
+
+    <!-- Header / Navbar -->
+    <header>
+        <div class="container nav-container">
+            <div class="logo">
+                <i class="fa-solid fa-heart-pulse"></i>
+                <div class="logo-text">
+                    <h1>CarePlus</h1>
+                    <p>Your Health. Our Priority</p>
+                </div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Doctors</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <a href="patient-login.html" class="btn btn-outline">Patient Login</a>
+                <a href="register.html" class="btn btn-solid">Patient Register</a>
+                <a href="admin-login.html" class="btn btn-outline">Admin Login</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Registration Content -->
+    <main class="register-main">
+        <div class="container">
+            <div class="register-header-text">
+                <p class="hero-subtitle">CAREPLUS PATIENT PORTAL</p>
+                <h2>Create Your <span>CarePlus Account</span></h2>
+                <p class="hero-desc">Register securely to find doctors, check available appointments and manage your
+                    healthcare visits.</p>
+            </div>
+
+            <div class="register-container">
+                <!-- Left Side Info Panel -->
+                <div class="register-info-panel">
+                    <div class="info-avatar">
+                        <img src="https://cdn-icons-png.flaticon.com/512/3774/3774299.png" alt="Doctor Avatar">
+                    </div>
+                    <h3>Welcome to CarePlus</h3>
+                    <p class="info-sub">Your healthcare journey starts here. Create your account and access convenient
+                        appointment scheduling in one place.</p>
+
+                    <div class="info-features">
+                        <div class="info-feature-item">
+                            <i class="fa-solid fa-shield-halved"></i>
+                            <div>
+                                <h4>Secure & Private</h4>
+                                <p>Your information is protected.</p>
+                            </div>
+                        </div>
+                        <div class="info-feature-item">
+                            <i class="fa-regular fa-calendar-check"></i>
+                            <div>
+                                <h4>Easy Appointment Booking</h4>
+                                <p>Find doctors and available slots.</p>
+                            </div>
+                        </div>
+                        <div class="info-feature-item">
+                            <i class="fa-solid fa-heart-pulse"></i>
+                            <div>
+                                <h4>Better Healthcare</h4>
+                                <p>Manage your visits easily.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Side Form -->
+                <div class="register-form-panel">
+                    <h3>Patient Registration</h3>
+                    <p class="form-sub">Please enter your details below.</p>
+
+                    <div id="registrationSuccess" class="registration-success hidden" role="status">
+                        <div class="registration-success-icon"><i class="fa-solid fa-circle-check"></i></div>
+                        <h3>Registration Successful!</h3>
+                        <p>Welcome, <strong id="registeredPatientName"></strong>.</p>
+                        <p>Your Patient ID is:</p>
+                        <strong id="registeredPatientId" class="patient-id-value"></strong>
+                        <p>Please save this Patient ID. You can use it to log in.</p>
+                        <a href="patient-login.html" class="btn btn-solid full-width-btn">Go to Patient Login</a>
+                    </div>
+
+                    <!-- ✅ FIXED: Added id, removed action and method -->
+                    <form id="registrationForm" class="registration-form">
+                        <div class="form-group full-width">
+                            <label>Full Name <span>*</span></label>
+                            <input type="text" id="regFullName" placeholder="Enter your full name" required>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Date of Birth <span>*</span></label>
+                                <div class="input-icon-wrap">
+                                    <input type="date" id="regDob" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Age <span>*</span></label>
+                                <input type="number" id="regAge" placeholder="Enter age" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Gender</label>
+                                <select id="regGender">
+                                    <option value="">Select gender</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Phone Number <span>*</span></label>
+                                <input type="tel" id="regPhone" placeholder="Enter your phone number" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label>Email Address <span>*</span></label>
+                            <input type="email" id="regEmail" placeholder="Enter your email" required>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label>Address</label>
+                            <textarea id="regAddress" placeholder="Enter your address"></textarea>
+                        </div>
+
+                        <h4 class="section-title">Emergency Contact</h4>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Contact Name</label>
+                                <input type="text" id="regEmergencyName" placeholder="Enter contact name">
+                            </div>
+                            <div class="form-group">
+                                <label>Contact Number</label>
+                                <input type="tel" id="regEmergencyNumber" placeholder="Enter contact number">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Password <span>*</span></label>
+                                <input type="password" id="regPassword" placeholder="Create a password" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Confirm Password <span>*</span></label>
+                                <input type="password" id="regConfirmPassword" placeholder="Confirm your password"
+                                    required>
+                            </div>
+                        </div>
+
+                        <div class="form-group full-width checkbox-group">
+                            <input type="checkbox" id="confirm-info" required>
+                            <label for="confirm-info">I confirm that the information provided is correct.</label>
+                        </div>
+
+                        <button type="submit" class="btn btn-solid full-width-btn">Create Patient Account <i
+                                class="fa-solid fa-arrow-right"></i></button>
+
+                        <p class="form-footer-text">Already have an account? <a href="patient-login.html">Patient
+                                Login</a></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

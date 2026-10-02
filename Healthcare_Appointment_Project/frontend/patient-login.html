@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CarePlus - Patient Login</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+    <header>
+
+        <div class="container nav-container">
+
+
+            <!-- LOGO -->
+
+            <a href="index.html" class="logo">
+
+                <i class="fa-solid fa-heart-pulse"></i>
+
+                <div class="logo-text">
+
+                    <h1>CarePlus</h1>
+
+                    <p>Your Health. Our Priority</p>
+
+                </div>
+
+            </a>
+
+
+            <!-- NAVIGATION -->
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        About
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Services
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Doctors
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+
+            <!-- NAV BUTTONS -->
+
+            <div class="nav-buttons">
+
+                <a href="patient-login.html" class="btn btn-solid">
+
+                    Patient Login
+
+                </a>
+
+                <a href="register.html" class="btn btn-outline">
+
+                    Patient Register
+
+                </a>
+
+                <a href="admin-login.html" class="btn btn-outline">
+
+                    Admin Login
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+     LOGIN PAGE
+===================================================== -->
+
+    <main class="login-page">
+
+
+        <!-- PAGE INTRODUCTION -->
+
+        <div class="login-heading">
+
+            <p class="login-subtitle">
+                CAREPLUS PATIENT PORTAL
+            </p>
+
+            <h1>
+                Welcome
+                <span>Back</span>
+            </h1>
+
+            <p>
+                Sign in to manage your appointments,
+                view your visits and stay connected
+                with your healthcare.
+            </p>
+
+        </div>
+
+
+
+        <!-- LOGIN CONTAINER -->
+
+        <div class="login-container">
+
+
+            <!-- =================================================
+             LEFT INFORMATION
+        ================================================== -->
+
+            <section class="login-info">
+
+
+                <div class="login-illustration">
+
+                    <div class="doctor-icon">
+
+                        <i class="fa-solid fa-user-doctor"></i>
+
+                    </div>
+
+                    <div class="medical-circle circle-one"></div>
+
+                    <div class="medical-circle circle-two"></div>
+
+                </div>
+
+
+                <h2>
+                    Access Your CarePlus Account
+                </h2>
+
+
+                <p>
+                    Login to book appointments, manage
+                    your visits and stay connected with
+                    your healthcare.
+                </p>
+
+
+
+                <!-- BENEFIT 1 -->
+
+                <div class="login-benefit">
+
+                    <div class="login-benefit-icon">
+
+                        <i class="fa-regular fa-calendar-check"></i>
+
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Book Appointments
+                        </strong>
+
+                        <span>
+                            Find and book your preferred doctors.
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- BENEFIT 2 -->
+
+                <div class="login-benefit">
+
+                    <div class="login-benefit-icon">
+
+                        <i class="fa-solid fa-clipboard-list"></i>
+
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            View Appointment History
+                        </strong>
+
+                        <span>
+                            Track and manage your visits.
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- BENEFIT 3 -->
+
+                <div class="login-benefit">
+
+                    <div class="login-benefit-icon">
+
+                        <i class="fa-solid fa-heart-pulse"></i>
+
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Better Healthcare
+                        </strong>
+
+                        <span>
+                            Your health, our priority.
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+             LOGIN FORM
+        ================================================== -->
+
+            <section class="login-card">
+
+
+                <div class="login-card-header">
+
+                    <div class="login-lock-icon">
+
+                        <i class="fa-solid fa-lock"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <h2>
+                            Patient Login
+                        </h2>
+
+                        <p>
+                            Enter your credentials to access
+                            your account.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- LOGIN FORM -->
+
+                <form id="patientLoginForm">
+
+
+                    <!-- PATIENT ID -->
+
+                    <div class="login-form-group">
+
+                        <label for="patientId">
+
+                            Patient ID or Email
+                            <span>*</span>
+
+                        </label>
+
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-regular fa-id-card"></i>
+
+                            <input type="text" id="patientId" name="patientId" placeholder="Enter Patient ID or Email"
+                                autocomplete="username" required>
+
+                        </div>
+
+                        <small>
+                            Example: P202600123 or patient@example.com
+                        </small>
+
+                    </div>
+
+
+
+                    <!-- PASSWORD -->
+
+                    <div class="login-form-group">
+
+                        <label for="loginPassword">
+
+                            Password
+                            <span>*</span>
+
+                        </label>
+
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-solid fa-lock"></i>
+
+                            <input type="password" id="loginPassword" name="password" placeholder="Enter your password"
+                                autocomplete="current-password" required>
+
+                            <button type="button" class="password-toggle" id="togglePassword"
+                                aria-label="Show password">
+
+                                <i class="fa-regular fa-eye"></i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- REMEMBER ME -->
+
+                    <div class="login-options">
+
+                        <label class="remember-me">
+
+                            <input type="checkbox" id="rememberMe">
+
+                            <span>
+                                Remember me
+                            </span>
+
+                        </label>
+
+
+                        <a href="#">
+                            Forgot password?
+                        </a>
+
+                    </div>
+
+
+
+                    <!-- LOGIN BUTTON -->
+
+                    <button type="submit" class="login-submit-btn">
+
+                        Login
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </button>
+
+
+
+                    <!-- REGISTER LINK -->
+
+                    <p class="register-link">
+
+                        Don't have an account?
+
+                        <a href="register.html">
+                            Register Now
+                        </a>
+
+                    </p>
+
+
+                </form>
+
+
+            </section>
+
+
+        </div>
+
+
+    </main>
+
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>

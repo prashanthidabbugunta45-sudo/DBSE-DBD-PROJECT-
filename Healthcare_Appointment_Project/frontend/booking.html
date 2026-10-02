@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment - CarePlus</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="booking-page">
+
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-heart-pulse"></i>
+                <div class="logo-text">
+                    <h1>CarePlus</h1>
+                    <p>Your Health. Our Priority</p>
+                </div>
+            </a>
+            <div class="nav-buttons">
+                <a href="dashboard.html" class="btn btn-outline"><i class="fa-solid fa-arrow-left"></i> Dashboard</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="booking-main">
+        <div class="container">
+
+            <section id="step1" class="booking-step">
+                <h1>What is your problem?</h1>
+                <p>Select a category so we can find the right specialist for you.</p>
+                <div class="problem-grid" id="problemGrid">
+                    <button class="problem-card" data-spec="Cardiology"><i class="fa-solid fa-heart"></i><span>Heart /
+                            Chest Problem</span></button>
+                    <button class="problem-card" data-spec="Dermatology"><i class="fa-solid fa-hand-dots"></i><span>Skin
+                            Problem</span></button>
+                    <button class="problem-card" data-spec="Neurology"><i class="fa-solid fa-brain"></i><span>Headache /
+                            Nervous System</span></button>
+                    <button class="problem-card" data-spec="Orthopedics"><i class="fa-solid fa-bone"></i><span>Bone /
+                            Joint Problem</span></button>
+                    <button class="problem-card" data-spec="Ophthalmology"><i class="fa-solid fa-eye"></i><span>Eye
+                            Problem</span></button>
+                    <button class="problem-card" data-spec="Dentistry"><i class="fa-solid fa-tooth"></i><span>Dental
+                            Problem</span></button>
+                    <button class="problem-card" data-spec="General Medicine"><i
+                            class="fa-solid fa-stethoscope"></i><span>General Checkup</span></button>
+                </div>
+            </section>
+
+            <section id="step2" class="booking-step hidden">
+                <h1>Available Doctors</h1>
+                <p>Choose a doctor to see their availability.</p>
+                <div id="doctorList" class="doctor-list"></div>
+                <button onclick="goBackToStep1()" class="btn btn-outline" style="margin-top:20px;">← Back</button>
+            </section>
+
+            <section id="step3" class="booking-step hidden">
+                <h1>Select a Date</h1>
+                <p id="selectedDoctorName"></p>
+                <div id="doctorProfile" class="doctor-profile-summary"></div>
+                <div class="calendar-legend">
+                    <span><span class="legend-dot available"></span> Available</span>
+                    <span><span class="legend-dot full"></span> Full</span>
+                    <span><span class="legend-dot holiday"></span> Holiday</span>
+                </div>
+                <div id="calendar" class="calendar-grid"></div>
+                <button onclick="goBackToStep2()" class="btn btn-outline" style="margin-top:20px;">← Back</button>
+            </section>
+
+            <section id="step4" class="booking-step hidden">
+                <h1>Confirm Appointment</h1>
+                <div class="appointment-form-container">
+                    <div class="form-group">
+                        <label>Patient</label>
+                        <input type="text" id="apptPatientName" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label>Doctor</label>
+                        <input type="text" id="apptDoctorName" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label>Date</label>
+                        <input type="text" id="apptDate" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label>Select Time Slot <span>*</span></label>
+                        <select id="apptTime" required>
+                            <option value="">Choose a time slot</option>
+                        </select>
+                        <small id="slotsInfo" style="color:#63798a;"></small>
+                    </div>
+                    <div class="form-group">
+                        <label>Reason for Visit <span>*</span></label>
+                        <textarea id="apptReason" placeholder="Briefly describe your symptoms" required></textarea>
+                    </div>
+                    <button id="confirmBookingBtn" class="btn btn-solid full-width-btn">Confirm Appointment</button>
+                    <button onclick="goBackToStep3()" class="btn btn-outline full-width-btn" style="margin-top:10px;">←
+                        Back</button>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,9 @@
+.error-help {
+    margin: 8px 0 12px;
+    font-size: 13px;
+    color: #8d3a3a
+}
+
+.message.error .button {
+    margin-top: 4px
+}

@@ -1,0 +1,39 @@
+.login-panel {
+    padding: 34px 38px
+}
+
+.login-panel .page-title {
+    margin: 8px 0
+}
+
+.login-options-react {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 18px 0;
+    color: #718797;
+    font-size: 13px
+}
+
+.login-options-react a,
+.login-footer a {
+    color: #087dcc;
+    font-weight: 700
+}
+
+.login-footer {
+    text-align: center;
+    margin: 20px 0 0
+}
+
+@media(max-width:600px) {
+    .login-panel {
+        padding: 24px 20px
+    }
+
+    .login-options-react {
+        gap: 12px;
+        align-items: flex-start;
+        flex-direction: column
+    }
+}

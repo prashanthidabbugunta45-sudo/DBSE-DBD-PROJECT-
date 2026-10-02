@@ -1,0 +1,26 @@
+# Environment files (never commit real secrets)
+.env
+backend/.env
+*.env
+!.env.example
+!**/.env.example
+
+# Python
+__pycache__/
+*.pyc
+backend/venv/
+backend/venv-py315/
+.venv/
+
+# Node / frontend
+frontend-react/node_modules/
+frontend-react/dist/
+node_modules/
+
+# Editor / OS
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Misc archives
+*.zip

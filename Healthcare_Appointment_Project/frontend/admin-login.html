@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login - CarePlus</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-heart-pulse"></i>
+                <div class="logo-text">
+                    <h1>CarePlus</h1>
+                    <p>Your Health. Our Priority</p>
+                </div>
+            </a>
+            <div class="nav-buttons">
+                <a href="patient-login.html" class="btn btn-outline">Patient Login</a>
+                <a href="register.html" class="btn btn-outline">Patient Register</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="login-page">
+        <div class="login-heading">
+            <p class="login-subtitle">CAREPLUS ADMIN PORTAL</p>
+            <h1>Admin <span>Login</span></h1>
+            <p>Secure access to manage doctors, appointments, patients and payments.</p>
+        </div>
+
+        <div class="login-container" style="grid-template-columns: 1fr; max-width: 500px;">
+            <section class="login-card">
+                <div class="login-card-header">
+                    <div class="login-lock-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                    <div>
+                        <h2>Admin Access</h2>
+                        <p>Enter your admin credentials.</p>
+                    </div>
+                </div>
+
+                <form id="adminLoginForm">
+                    <div class="login-form-group">
+                        <label for="adminEmail">Admin Email <span>*</span></label>
+                        <div class="input-wrapper">
+                            <i class="fa-regular fa-envelope"></i>
+                            <input type="email" id="adminEmail" placeholder="admin1@careplus.com" required>
+                        </div>
+                    </div>
+
+                    <div class="login-form-group">
+                        <label for="adminPassword">Password <span>*</span></label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-lock"></i>
+                            <input type="password" id="adminPassword" placeholder="Enter admin password" required>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="login-submit-btn">Login as Admin <i
+                            class="fa-solid fa-arrow-right"></i></button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

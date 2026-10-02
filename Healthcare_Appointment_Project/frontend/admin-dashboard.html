@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - CarePlus</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="admin-dashboard-page">
+
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-heart-pulse"></i>
+                <div class="logo-text">
+                    <h1>CarePlus Admin</h1>
+                    <p>Healthcare Management</p>
+                </div>
+            </a>
+            <div class="nav-buttons">
+                <span id="adminName" style="font-weight:600;color:#0f6cbd;margin-right:15px;align-self:center;"></span>
+                <button onclick="adminLogout()" class="btn btn-outline">Logout <i
+                        class="fa-solid fa-right-from-bracket"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <main class="dashboard-main">
+        <div class="container">
+
+            <h1 style="margin-bottom:20px;color:#123b5d;">Healthcare Admin Dashboard</h1>
+
+            <div class="admin-stats">
+                <div class="admin-stat-card">
+                    <i class="fa-solid fa-users"></i>
+                    <h3 id="statPatients">0</h3>
+                    <p>Total Patients</p>
+                </div>
+                <div class="admin-stat-card">
+                    <i class="fa-solid fa-user-doctor"></i>
+                    <h3 id="statDoctors">0</h3>
+                    <p>Total Doctors</p>
+                </div>
+                <div class="admin-stat-card">
+                    <i class="fa-regular fa-calendar-check"></i>
+                    <h3 id="statAppointments">0</h3>
+                    <p>Total Appointments</p>
+                </div>
+                <div class="admin-stat-card">
+                    <i class="fa-regular fa-clock"></i>
+                    <h3 id="statToday">0</h3>
+                    <p>Today's Appointments</p>
+                </div>
+            </div>
+
+            <section class="dashboard-section">
+                <h2><i class="fa-regular fa-calendar-check"></i> All Appointments</h2>
+                <div id="adminAppointmentList">
+                    <p class="loading-text">Loading...</p>
+                </div>
+            </section>
+
+            <section class="dashboard-section">
+                <h2><i class="fa-solid fa-users"></i> All Patients</h2>
+                <div id="adminPatientList">
+                    <p class="loading-text">Loading...</p>
+                </div>
+            </section>
+
+            <section class="dashboard-section">
+                <h2><i class="fa-solid fa-user-doctor"></i> Manage Doctors</h2>
+                <form id="doctorForm" class="admin-inline-form">
+                    <input id="doctorName" placeholder="Doctor name" required>
+                    <select id="doctorSpecialization" required></select>
+                    <input id="doctorQualification" placeholder="Qualification">
+                    <input id="doctorExperience" type="number" min="0" placeholder="Years">
+                    <input id="doctorPhone" placeholder="Phone">
+                    <input id="doctorEmail" type="email" placeholder="Email">
+                    <input id="doctorBio" placeholder="Short bio">
+                    <button class="btn btn-solid" type="submit">Add Doctor</button>
+                </form>
+                <div id="adminDoctorList">
+                    <p class="loading-text">Loading...</p>
+                </div>
+            </section>
+
+            <section class="dashboard-section">
+                <h2><i class="fa-regular fa-calendar-xmark"></i> Manage Holidays</h2>
+                <form id="holidayForm" class="admin-inline-form">
+                    <input id="holidayDate" type="date" required>
+                    <input id="holidayReason" placeholder="Holiday reason" required>
+                    <button class="btn btn-solid" type="submit">Add Holiday</button>
+                </form>
+                <div id="adminHolidayList">
+                    <p class="loading-text">Loading...</p>
+                </div>
+            </section>
+
+            <section class="dashboard-section">
+                <h2><i class="fa-solid fa-receipt"></i> Payments</h2>
+                <div id="adminPaymentList">
+                    <p class="loading-text">Loading...</p>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
